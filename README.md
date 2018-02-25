@@ -1,5 +1,5 @@
 
-#Algorytmy i struktury danych - IV Semestr 
+# Algorytmy i struktury danych - IV Semestr 
 
 ## Project list:
 
