@@ -7,17 +7,93 @@ import static com.inql.aisd.redblack.Color.*;
 
 public class RedBlackTree {
 
-    private Node root;
-    private Node sentinel;
+    private class Node implements Comparable<Node>{
+        private Integer value = null;
+        private Node leftSon = sentinel;
+        private Node rightSon = sentinel;
+        private Node parent = sentinel;
+        private Color color = RED;
+        private int counter = 1;
 
-    {
-        sentinel =new Node();
-        sentinel.setColor(BLACK);
-        sentinel.setValue(null);
+        public Node(Integer value) {
+            this.value = value;
+        }
+
+        public Integer getValue() {
+            return value;
+        }
+
+        public void setValue(Integer value) {
+            this.value = value;
+        }
+
+        public Node getLeftSon() {
+            return leftSon;
+        }
+
+        public void setLeftSon(Node leftSon) {
+            this.leftSon = leftSon;
+        }
+
+        public Node getRightSon() {
+            return rightSon;
+        }
+
+        public void setRightSon(Node rightSon) {
+            this.rightSon = rightSon;
+        }
+
+        public Node getParent() {
+            return parent;
+        }
+
+        public void setParent(Node parent) {
+            this.parent = parent;
+        }
+
+        public Color getColor() {
+            return color;
+        }
+
+        public void setColor(Color color) {
+            this.color = color;
+        }
+
+        public int getCounter() {
+            return counter;
+        }
+
+        public void setCounter(int counter) {
+            this.counter = counter;
+        }
+
+        public void increaseCounter(){
+            this.counter++;
+        }
+
+        public void decreaseCounter(){
+            this.counter--;
+        }
+
+        @Override
+        public int compareTo(Node o) {
+            if(o!=null && o.getValue()!=null) return this.getValue() - o.getValue();
+            return -this.getValue();
+        }
+
+        @Override
+        public String toString() {
+            return
+                    "v:" + value +
+                            "c:" + counter +
+                            ":"  + color;
+        }
     }
 
+    private final Node sentinel = new Node(null);
+    private Node root = sentinel;
+
     public RedBlackTree() {
-        this.root = this.sentinel;
     }
 
     public Node getRoot() {
@@ -96,7 +172,7 @@ public class RedBlackTree {
 
     public void redBlackInsert(Node node){
         insertNode(node);
-        Node uncle = null;
+        Node uncle = sentinel;
         while(node != root && node.getParent().getColor()== RED){
             if(node.getParent() == node.getParent().getParent().getLeftSon()){
                 uncle = node.getParent().getParent().getRightSon();
@@ -175,7 +251,7 @@ public class RedBlackTree {
         Node toDelete = treeSearch(value,root);
         if(toDelete!=sentinel){
             if(toDelete.getCounter()==1){
-                return redBlackDelete(treeSearch(value,root));
+                return redBlackDelete(toDelete);
             }
                 toDelete.decreaseCounter();
                 return toDelete;
@@ -193,13 +269,6 @@ public class RedBlackTree {
             x = y.getLeftSon();
         else{
             x = y.getRightSon();
-        }
-        if(x == sentinel)
-        {
-            x = new Node();
-            x.setParent(y);
-            x.setValue(null);
-            x.setColor(BLACK);
         }
 
         x.setParent(y.getParent());
