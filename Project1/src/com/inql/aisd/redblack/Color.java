@@ -1,5 +1,16 @@
 package com.inql.aisd.redblack;
 
 public enum Color {
-    RED, BLACK
+    RED{
+        @Override
+        public String toString(){
+            return "\u001B[31m";
+        }
+    },
+    BLACK{
+        @Override
+        public String toString(){
+            return "\u001B[30m";
+        }
+    }
 }
