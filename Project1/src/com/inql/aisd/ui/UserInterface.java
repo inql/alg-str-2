@@ -112,14 +112,19 @@ public class UserInterface {
         System.out.println(Utilities.repeat("-",40)+"\nTime to delete some!\n");
         System.out.println("Deleting :"+redBlackTree.redBlackDelete(14));
         System.out.println("After:\n"+redBlackTree);
+        redBlackTree.inorderPrint();
         System.out.println("Deleting :"+redBlackTree.redBlackDelete(27));
         System.out.println("After:\n"+redBlackTree);
+        redBlackTree.inorderPrint();
         System.out.println("Deleting :"+redBlackTree.redBlackDelete(4));
         System.out.println("After:\n"+redBlackTree);
+        redBlackTree.inorderPrint();
         System.out.println("Deleting :"+redBlackTree.redBlackDelete(9));
         System.out.println("After (but only counter was decreased):\n"+redBlackTree);
+        redBlackTree.inorderPrint();
         System.out.println("Deleting :"+redBlackTree.redBlackDelete(98));
         System.out.println("After (but not found):\n"+redBlackTree);
+        redBlackTree.inorderPrint();
     }
 }
 

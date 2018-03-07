@@ -1,9 +1,6 @@
 package com.inql.aisd;
 
-import com.inql.aisd.redblack.RedBlackTree;
 import com.inql.aisd.ui.UserInterface;
-
-import java.util.ArrayList;
 
 public class Main {
 

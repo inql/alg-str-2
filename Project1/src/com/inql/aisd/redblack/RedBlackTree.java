@@ -36,7 +36,7 @@ public class RedBlackTree {
         @Override
         public String toString() {
             return
-                    color + "v:" + value +
+                    color + "v:" + String.format("%04d",value) +
                             "c:" + counter +
                             "\u001B[0m";
         }
@@ -137,6 +137,7 @@ public class RedBlackTree {
         System.out.println(Utilities.repeat(" ",counter)+x);
         counter++;
         inorderPrint(x.rightSon, --counter);
+
 
     }
 
