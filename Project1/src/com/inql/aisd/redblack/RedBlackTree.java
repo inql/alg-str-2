@@ -8,14 +8,14 @@ import static com.inql.aisd.redblack.Color.*;
 public class RedBlackTree {
 
     private class Node implements Comparable<Node>{
-        private Integer value = null;
+        private Integer value;
         private Node leftSon = sentinel;
         private Node rightSon = sentinel;
         private Node parent = sentinel;
         private Color color = RED;
         private int counter = 1;
 
-        public Node(Integer value) {
+        Node(Integer value) {
             this.value = value;
         }
 
@@ -36,7 +36,7 @@ public class RedBlackTree {
         @Override
         public String toString() {
             return
-                    color + "v:" + value +
+                    color + "v:" + String.format("%04d",value) +
                             "c:" + counter +
                             "\u001B[0m";
         }
@@ -49,7 +49,12 @@ public class RedBlackTree {
         return sentinel;
     }
 
-    public void leftRotate(Node toRotate){
+    /**
+     *
+     * @param toRotate - wezel do obrocenia
+     */
+
+    private void leftRotate(Node toRotate){
         Node rightSon = toRotate.rightSon;
         toRotate.rightSon = rightSon.leftSon;
         if(rightSon.leftSon!=sentinel)
@@ -64,7 +69,12 @@ public class RedBlackTree {
         toRotate.parent = rightSon;
     }
 
-    public void rightRotate(Node toRotate){
+    /**
+     *
+     * @param toRotate - wezel do obrocenia
+     */
+
+    private void rightRotate(Node toRotate){
         Node leftSon = toRotate.leftSon;
         toRotate.leftSon = leftSon.rightSon;
         if(leftSon.rightSon!=sentinel)
@@ -79,9 +89,11 @@ public class RedBlackTree {
         leftSon.rightSon = toRotate;
         toRotate.parent = leftSon;
     }
-
+    /**
+     * Metoda wypisuje zawartość drzewa w postaci preoreder
+     */
     public void preorderPrint() {
-        postorderPrint(root, maxDepth());
+        preorderPrint(root, maxDepth());
     }
 
     private void preorderPrint(Node x, int counter) {
@@ -110,6 +122,10 @@ public class RedBlackTree {
         System.out.println(Utilities.repeat(" ",counter)+x);
 
     }
+
+    /**
+     * Metoda wypisuje zawartość drzewa w postaci inorder
+     */
     public void inorderPrint() {
         inorderPrint(root, maxDepth());
     }
@@ -122,7 +138,13 @@ public class RedBlackTree {
         counter++;
         inorderPrint(x.rightSon, --counter);
 
+
     }
+
+    /**
+     * Umieszcza wartość do drzewa czerwono-czarnego
+     * @param value - wartość do umieszczenia
+     */
 
     public void redBlackInsert(Integer value){
         redBlackInsert(new Node(value));
@@ -131,7 +153,7 @@ public class RedBlackTree {
     private void redBlackInsert(Node node){
         if(insertNode(node).counter!=1)
             return;
-        Node uncle = sentinel;
+        Node uncle;
         while(node != root && node.parent.color== RED){
             if(node.parent == node.parent.parent.leftSon){
                 uncle = node.parent.parent.rightSon;
@@ -210,6 +232,12 @@ public class RedBlackTree {
         }
     }
 
+    /**
+     * Usuwa wartość z drzewa czerwono/czarnego
+     * @param value - wartość do usunięcia (uprzednio wyszukiwana za pomocą <code>treeSearch</code>
+     * @return znaleziony węzeł - jeśli istnieje - w przeciwnym wypadku zwraca wartownika (sentinel)
+     */
+
     public Node redBlackDelete(int value){
         Node toDelete = treeSearch(value,root);
         if(toDelete!=sentinel){
@@ -251,6 +279,11 @@ public class RedBlackTree {
             redBlackDeleteFixUp(x);
         return y;
     }
+
+    /**
+     * Metoda naprawia drzewo czerwono/czarne po usunięciu elementu
+     * @param toFix poddrzewo od ktorego zaczynamy naprawianie
+     */
 
     private void redBlackDeleteFixUp(Node toFix){
         Node w;
@@ -309,7 +342,11 @@ public class RedBlackTree {
     }
 
     public Node treeSearch(int value){
-        return treeSearch(value, root);
+        Node node = treeSearch(value, root);
+        if(node == sentinel){
+            System.out.println("Not found.");
+        }
+        return node;
     }
     /**
      * Metoda <code>treeSearch</code> wyszukuje podaną wartość w drzewie
@@ -318,7 +355,7 @@ public class RedBlackTree {
      * @return - zwraca referencję do obiektu Node lub null jeśli wartość nie znajduje się w drzewie
      */
 
-    public Node treeSearch(int value, Node root){
+    private Node treeSearch(int value, Node root){
         Node current = root;
         while(current != sentinel && current.value!=value){
             if(value <  current.value)
@@ -375,6 +412,16 @@ public class RedBlackTree {
     public void treeDelete(){
         this.root = sentinel;
     }
+
+    /**
+     * Ładne drukowanie drzewa
+     * @param lineBuilder - buduje aktualną linię horyzontalnie
+     * @param isTail - sprawdza czy wezel jest liściem
+     * @param sb - wynik koncowy
+     * @param subRoot - poddrzewo ktore sprawdzamy
+     * @param counter - licznik pomagajacy uniknac rysowania niepotrzebnych linii
+     * @return sb - wynik koncowy
+     */
 
     private StringBuilder build(StringBuilder lineBuilder, boolean isTail, StringBuilder sb, Node subRoot, int counter) {
         Node rightSon = subRoot.rightSon;
