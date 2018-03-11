@@ -39,7 +39,7 @@ public class Lcs {
                 j--;
             }
             else if (lcsLengths[i][j-1] >= lcsLengths[i][j]) j--;
-            else i++;
+            else i--;
         }
         result.reverse();
         return result.append("\n").toString();
