@@ -56,7 +56,7 @@ public class Lcs {
             allLcs.add("");
         else if(x.charAt(k-1) == y.charAt(l-1)){
             for(String lcsString : getAllLcs(x,y,k-1,l-1))
-                allLcs.add(lcsString + x.charAt(k-1));
+            allLcs.add(lcsString + x.charAt(k-1));
         }
         else{
             if(lcsLengths[k-1][l] >= lcsLengths[k][l-1])
@@ -87,7 +87,7 @@ public class Lcs {
         }
         System.out.println(result);
         System.out.println("length of LCS = "+lcsLengths[k][l]);
-        System.out.println(printLcs());
-        System.out.println(getAllLcs());
+        System.out.println("Found LCS = "+printLcs());
+        System.out.println("All LCS:\n"+getAllLcs());
     }
 }
