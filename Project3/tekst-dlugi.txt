@@ -1,0 +1,287 @@
+Banner logo	
+Przekaż 1% podatku na rozwój Wikipedii.
+KRS: 0000244732
+ZAMKNIJ
+Symbol Newtona[edytuj]
+Symbol Newtona, współczynnik dwumianowy (dwumienny) Newtona – funkcja dwóch argumentów całkowitych nieujemnych, zdefiniowana jako:
+
+{\displaystyle {n \choose k}={\frac {n!}{k!(n-k)!}}} {n \choose k}={\frac  {n!}{k!(n-k)!}}    dla   {\displaystyle 0\leq k\leq n} {\displaystyle 0\leq k\leq n}
+gdzie {\displaystyle a!} {\displaystyle a!} oznacza silnię liczby całkowitej nieujemnej {\displaystyle a} a.
+
+Symbol {\displaystyle {n \choose k}} {n \choose k} odczytuje się n nad k, n po k lub k z n.
+
+Symbol Newtona można równoważnie wyrazić wzorem rekurencyjnym:
+
+{\displaystyle {n \choose k}={\begin{cases}1&{\mbox{dla }}k=0{\mbox{ lub }}k=n\\{n-1 \choose k-1}+{n-1 \choose k}&{\mbox{dla }}0<k<n\end{cases}}} {n \choose k}={\begin{cases}1&{\mbox{dla }}k=0{\mbox{ lub }}k=n\\{n-1 \choose k-1}+{n-1 \choose k}&{\mbox{dla }}0<k<n\end{cases}}
+Symbol Newtona pojawia się we wzorze dwumiennym Newtona jako współczynnik w k-tym wyrazie rozwinięcia n-tej potęgi sumy dwu składników – stąd jego druga nazwa współczynnik dwumienny Newtona.
+
+Spis treści  [ukryj] 
+1	Własności symbolu Newtona
+1.1	Związki kombinatoryczne
+1.2	Pochodzenie wzoru iteracyjnego
+1.3	Pochodzenie wzoru rekurencyjnego
+1.4	Tożsamości algebraiczne
+1.5	Teoria liczb
+2	Trójkąt Pascala
+3	Obliczanie symbolu Newtona
+4	Ograniczenia dla symbolu Newtona
+5	Uogólnienie na wielomiany wyższych stopni
+6	Uogólnienie na liczby rzeczywiste i zespolone
+7	Zobacz też
+8	Linki zewnętrzne
+Własności symbolu Newtona[edytuj | edytuj kod]
+Związki kombinatoryczne[edytuj | edytuj kod]
+Symbol Newtona równy jest liczbie wszystkich k-elementowych kombinacji bez powtórzeń ze zbioru n-elementowego (k-elementowych podzbiorów zbioru n-elementowego). Liczba ta jest też oznaczana jako {\displaystyle C_{n}^{k}} C_{n}^{k}; w literaturze angielskiej spotyka się oznaczenie {\displaystyle {}^{n}C_{k}} {}^nC_k, w amerykańskiej {\displaystyle {}_{n}C_{k}} {}_nC_k (od wyrażenia „n choose k”, czyli „n brane po k”).
+
+Zatem poniższe symbole są równoważnymi oznaczeniami liczby dwuelementowych kombinacji ze zbioru siedmioelementowego:
+
+{\displaystyle {7 \choose 2}=C_{7}^{2}={}^{7}C_{2}={}_{7}C_{2}=21} {7 \choose 2}=C_{7}^{2}={}^{7}C_{2}={}_{7}C_{2}=21
+Pochodzenie wzoru iteracyjnego[edytuj | edytuj kod]
+Każdą kombinację k-elementową ze zbioru n-elementowego {\displaystyle A} A można utworzyć wybierając kolejno k różnych elementów. Uzyskuje się w ten sposób k-elementowy ciąg, czyli wariację ze zbioru {\displaystyle A} A. Wariacji takich jest
+
+{\displaystyle V_{n}^{k}={\frac {n!}{(n-k)!}}} V_{n}^{k}={\frac  {n!}{(n-k)!}}.
+Kombinacje, jako podzbiory, w przeciwieństwie do wariacji, czyli ciągów, nie mają ustalonej kolejności elementów. Dwie różne wariacje, różniące się tylko kolejnością elementów, dają tę samą kombinację. Liczba k-elementowych kombinacji jest więc mniejsza od liczby k-elementowych wariacji tylokrotnie, ile jest różnych porządków (przestawień, czyli permutacji) takiego ciągu. A ponieważ permutacji k-elementowych jest
+
+{\displaystyle P_{k}=k!} P_k = k!,
+ostatecznie:
+
+{\displaystyle C_{n}^{k}={\frac {V_{n}^{k}}{P_{k}}}={\frac {n!}{(n-k)!}}\cdot {1 \over k!}={\frac {n!}{k!(n-k)!}}} C_{n}^{k}={\frac  {V_{n}^{k}}{P_{k}}}={\frac  {n!}{(n-k)!}}\cdot {1 \over k!}={\frac  {n!}{k!(n-k)!}}.
+Pochodzenie wzoru rekurencyjnego[edytuj | edytuj kod]
+Z każdego zbioru n-elementowego można wybrać tylko jedną kombinację 0-elementową (czyli podzbiór pusty, {\displaystyle \varnothing } \varnothing ), stąd liczba kombinacji pustych {\displaystyle C_{n}^{0}=1} C_{n}^{0}=1.
+
+Z każdego zbioru n-elementowego {\displaystyle A} A można wybrać tylko jedną kombinację n-elementową {\displaystyle B} B (podzbiór niewłaściwy, równy całemu zbiorowi: {\displaystyle B=A} B=A), stąd liczba takich kombinacji {\displaystyle C_{n}^{n}=1} C_{n}^{n}=1.
+
+Oba powyższe stwierdzenia dotyczą oczywiście także zbioru pustego {\displaystyle A=\varnothing } A=\varnothing  (n=0).
+
+Niech teraz {\displaystyle A} A będzie niepustym zbiorem n-elementowym (n>0). Wyłączymy zeń jeden element, {\displaystyle a} a i oznaczymy pozostały podzbiór (n-1)-elementowy przez {\displaystyle A'} A':
+
+{\displaystyle A'=A\setminus \{a\}} A'=A\setminus \{a\}
+Wśród wszystkich niepustych kombinacji k-elementowych (k>0) wyróżnić można te, które zawierają element {\displaystyle a} a, i pozostałe, które go nie zawierają.
+
+Każdą k-elementową kombinację {\displaystyle K} K zawierającą {\displaystyle a} a można przedstawić jako unię pewnej (k-1)-elementowej kombinacji {\displaystyle K'} K' i jednoelementowego zbioru {\displaystyle \{a\}} \{a\}. Ponieważ przy tym {\displaystyle K'} K' zawiera się w (n-1)-elementowym {\displaystyle A'} A', to kombinacji takich jest {\displaystyle C_{n-1}^{k-1}} C_{{n-1}}^{{k-1}}.
+Każda k-elementowa kombinacja nie zawierająca {\displaystyle a} a sama zawiera się w {\displaystyle A\setminus \{a\}} A\setminus \{a\}, czyli w (n-1)-elementowym zbiorze {\displaystyle A'} A'. Zatem kombinacji takich jest {\displaystyle C_{n-1}^{k}} C_{{n-1}}^{k}.
+Stąd ostatecznie dla 0<k<n liczba kombinacji k-elementowych równa jest sumie liczb kombinacji obu rodzajów:
+
+{\displaystyle C_{n}^{k}=C_{n-1}^{k-1}+C_{n-1}^{k}} C_{n}^{k}=C_{{n-1}}^{{k-1}}+C_{{n-1}}^{k}
+Tożsamości algebraiczne[edytuj | edytuj kod]
+Skracając w definicji czynnik {\displaystyle (n-k)!} (n-k)! otrzymuje się:
+
+{\displaystyle {n \choose k}={\frac {\prod _{i=1}^{k}n-i+1}{\prod _{i=1}^{k}i}}=\prod _{i=1}^{k}{\frac {n-i+1}{i}}} {n \choose k}={\frac  {\prod _{{i=1}}^{k}n-i+1}{\prod _{{i=1}}^{k}i}}=\prod _{{i=1}}^{k}{\frac  {n-i+1}{i}}
+co dla dodatnich wartości k rozwija się do uproszczonej postaci iteracyjnej:
+
+{\displaystyle {n \choose k}={\frac {n(n-1)\cdots (n-k+1)}{1\cdot 2\cdots k}}} {n \choose k}={\frac  {n(n-1)\cdots (n-k+1)}{1\cdot 2\cdots k}}
+Dla k=0 puste iloczyny stają się równe jedności, i w efekcie:
+
+{\displaystyle {n \choose 0}=1.} {n \choose 0}=1.
+Dla k=1 w liczniku i mianowniku zostaje tylko pierwszy czynnik, stąd:
+
+{\displaystyle {n \choose 1}={\frac {n}{1}}=n} {n \choose 1}={\frac  n1}=n
+– jeden element spośród n wybrać można na n sposobów.
+
+Inne tożsamości:
+
+liczba kombinacji dopełniających:
+
+{\displaystyle {n \choose k}={n \choose n-k}} {n \choose k}={n \choose n-k}
+liczba kombinacji pustych (i dopełniających do pustych):
+
+{\displaystyle {n \choose 0}={n \choose n}=1} {n \choose 0}={n \choose n}=1
+liczba kombinacji w zbiorze pustym:
+
+{\displaystyle {0 \choose 0}=1} {0 \choose 0}=1
+{\displaystyle {n \choose k+1}={n \choose k}\cdot {\frac {n-k}{k+1}}} {n \choose k+1}={n \choose k}\cdot {\frac  {n-k}{k+1}}
+suma współczynników dwumianu Newtona {\displaystyle (1+1)^{n}} (1+1)^{n}:
+
+{\displaystyle \sum _{k=0}^{n}{n \choose k}=2^{n}} \sum _{{k=0}}^{{n}}{n \choose k}=2^{n}
+{\displaystyle \sum _{k=0}^{n}{n \choose k}^{2}={2n \choose n}} \sum_{k=0}^{n} {n \choose k}^2 = {2n \choose n}
+{\displaystyle \sum _{k=0}^{n}(-1)^{k}\cdot {n \choose k}=0} \sum _{{k=0}}^{n}(-1)^{k}\cdot {n \choose k}=0
+{\displaystyle \sum _{k=1}^{n}k{n \choose k}=n2^{n-1}} \sum _{{k=1}}^{{n}}k{n \choose k}=n2^{{n-1}}
+{\displaystyle \sum _{k=0}^{n}{r \choose m+k}{s \choose n-k}={r+s \choose m+n}} \sum _{{k=0}}^{n}{r \choose m+k}{s \choose n-k}={r+s \choose m+n}
+{\displaystyle {r \choose k}={\frac {r}{k}}{r-1 \choose k-1},k\neq 0} {r \choose k} = \frac{r}{k} {r-1 \choose k-1}, k \neq 0
+{\displaystyle (r-k){r \choose k}=r{r-1 \choose k}} (r-k){r \choose k} = r{r-1 \choose k}
+{\displaystyle {n \choose k}{n-k \choose p-k}={n \choose p}{p \choose k}} {n \choose k}{n-k \choose p-k} = {n \choose p}{p \choose k}
+Teoria liczb[edytuj | edytuj kod]
+Liczba pierwsza {\displaystyle p} p dzieli każdą liczbę {\displaystyle {p \choose k}} {p \choose k} dla {\displaystyle k=1,2,\ldots ,p-1} k=1,2,\ldots ,p-1.
+
+Dowód: W liczniku wyrażenia {\displaystyle {\frac {p(p-1)\cdots (p-k+1)}{1\cdot 2\cdots k}}} {\frac  {p(p-1)\cdots (p-k+1)}{1\cdot 2\cdots k}} występuje {\displaystyle p} p, zaś w mianowniku tylko liczby mniejsze, które ze względu na pierwszość liczby {\displaystyle p} p nie mogą być jej dzielnikami (oprócz 1). Ponieważ liczba jest całkowita, w jej rozkładzie na czynniki pierwsze występuje {\displaystyle p} p.
+
+Wniosek: W ciele {\displaystyle \mathbb {Z} _{p}} {\mathbb  {Z}}_{p} zachodzi równość: {\displaystyle (a+b)^{p}=a^{p}+b^{p}} (a+b)^{p}=a^{p}+b^{p}.
+
+Trójkąt Pascala[edytuj | edytuj kod]
+Wartości kolejnych symboli Newtona można zapisać w postaci trójkąta Pascala:
+
+0                     1
+1                   1   1
+2                 1   2   1
+3               1   3   3   1
+4             1   4   6   4   1
+5           1   5   10  10  5   1
+6         1   6   15  20  15  6   1
+7       1   7   21  35  35  21  7   1
+8     1   8   28  56  70  56  28  8   1
+9   1   9   36  84 126 126  84  36  9   1
+    . . . . . . . . . . . . . . . . . . .
+Kolejnym wierszom trójkąta odpowiadają kolejne wartości n, kolejnym wyrazom w każdym wierszu – kolejne wartości k.
+
+Skrajne wyrazy w każdym wierszu równe są jedności, każdy wyraz (poza skrajnymi) jest sumą dwu wyrazów stojących bezpośrednio nad nim, w poprzednim wierszu. Schemat ten odpowiada wprost wzorowi rekurencyjnemu.
+
+Obliczanie symbolu Newtona[edytuj | edytuj kod]
+Prosta, a równocześnie dość szybka metoda obliczania wartości współczynnika Newtona opiera się na uproszczonej postaci iteracyjnej:
+
+{\displaystyle {n \choose k}={\frac {n(n-1)\cdots (n-k+1)}{1\cdot 2\cdots k}}} {n \choose k}={\frac  {n(n-1)\cdots (n-k+1)}{1\cdot 2\cdots k}}
+oraz spostrzeżeniu o występowaniu czynników pierwszych w ciągu kolejnych liczb naturalnych:
+
+z każdych kolejnych dwu liczb naturalnych jedna jest parzysta (podzielna przez 2),
+z każdych kolejnych trzech liczb naturalnych jedna jest podzielna przez 3,
+z każdych kolejnych czterech liczb naturalnych jedna jest podzielna przez 4 itd.
+To gwarantuje, że z liczb {\displaystyle n} n i {\displaystyle (n-1)} (n-1) jedna jest podzielna przez 2, a więc i iloczyn {\displaystyle n(n-1)} n(n-1) jest podzielny przez 2 – można więc obliczyć iloraz {\displaystyle {\frac {n(n-1)}{2}}} {\frac  {n(n-1)}2}, i iloraz ten jest liczbą całkowitą. Z kolei z liczb {\displaystyle n} n, {\displaystyle (n-1)} (n-1) i {\displaystyle (n-2)} (n-2) jedna jest podzielna przez 3, zatem iloczyn {\displaystyle n(n-1)(n-2)} n(n-1)(n-2) dzieli się przez 3 (prócz tego, że na pewno dzieli się przez 2); zatem obliczony wcześniej iloraz {\displaystyle {\frac {n(n-1)}{2}}} {\frac  {n(n-1)}2} po pomnożeniu przez {\displaystyle (n-2)} (n-2) można podzielić przez 3, a uzyskana wartość ilorazu {\displaystyle {\frac {n(n-1)(n-2)}{2\cdot 3}}} {\frac  {n(n-1)(n-2)}{2\cdot 3}} znów jest liczbą całkowitą.
+
+Tym sposobem, mnożąc i dzieląc na przemian, można obliczyć wartość współczynnika Newtona {\displaystyle C_{n}^{k}} C_{n}^{k} wykonując {\displaystyle k} k mnożeń i tyleż dzieleń całkowitoliczbowych. Dzięki odpowiedniemu uporządkowaniu działań w metodzie tej nie występują ułamki – wszystkie wyniki pośrednie są całkowite, a więc nie ma ryzyka błędów zaokrąglenia.
+
+Przykładowa procedura w Pascalu:
+
+function WspNewtona( n, k : integer ) : integer;
+var
+    wynik : integer;
+    i : integer;
+begin
+    wynik := 1;
+
+    for i := 1 to k do
+        wynik := wynik * (n - i + 1) div i;
+
+    WspNewtona := wynik;
+end;
+Przykładowy predykat w Prologu:
+
+silnia(0, 1) :- !.
+silnia(1, 1) :- !.
+silnia(N, X) :- N1 is N-1, silnia(N1, X1), X is N * X1.
+
+npok(N, K, X) :- silnia(N, X1), silnia(K, X2), NK is N-K, silnia(NK, X3), X is X1 / (X2 * X3).
+Procedura ta działa szybko i z minimalnym kosztem pamięciowym – wymaga tylko dwu pomocniczych zmiennych (a po dodatkowym usprawnieniu nie potrzebowałaby żadnych). Drobną wadą tego sposobu jest niewielki nadmiar w trakcie obliczeń: maksymalna wartość pośrednia, otrzymana przed ostatnim dzieleniem przez k, jest k-krotnie większa od ostatecznego wyniku. To oznacza, że metody tej nie da się wykorzystać „do granic pojemności” typu całkowitego: maksymalna wiarygodna wartość obliczana tym sposobem zawsze będzie k-krotnie niższa od największej wartości całkowitej dostępnej w danym komputerze, kalkulatorze bądź języku programowania.
+
+Poniżej przedstawiona jest procedura rekurencyjna, pozbawiona tej wady.
+
+function WspNewtonaRek( n, k : integer ) : integer;
+begin
+    if (k = 0) or (k = n) then
+        WspNewtonaRek := 1
+    else
+        WspNewtonaRek := WspNewtonaRek( n-1, k-1 ) + WspNewtonaRek( n-1, k );
+end;
+Implementacja rekurencyjna bez użycia silni w Prologu:
+
+symbolnewtona(N, K, fail) :- K > N, !.
+symbolnewtona(K, K, 1) :- !.
+symbolnewtona(N, 0, 1) :- !.
+symbolnewtona(N, K, X) :- N1 is N-1, K1 is K-1, symbolnewtona(N1, K1, X1), symbolnewtona(N1, K, X2), X is X1 + X2, !.
+Ten sposób opiera się wprost na rekurencyjnym wzorze:
+
+{\displaystyle {n \choose k}={\begin{cases}1&{\mbox{gdy }}k=0{\mbox{ lub }}k=n\\{n-1 \choose k-1}+{n-1 \choose k}&{\mbox{gdy }}0<k<n\end{cases}}} {n \choose k}={\begin{cases}1&{\mbox{gdy }}k=0{\mbox{ lub }}k=n\\{n-1 \choose k-1}+{n-1 \choose k}&{\mbox{gdy }}0<k<n\end{cases}}
+Procedura ta nie ma wady poprzedniej metody – oblicza końcową wartość bez żadnego nadmiaru w wynikach pośrednich. Niestety, płaci się za to ogromnym kosztem obliczeń. Funkcja przestaje wywoływać samą siebie dopiero gdy zwraca wartość 1 – to oznacza, że obliczenie wartości {\displaystyle C_{n}^{k}} C_{n}^{k} wymaga co najmniej {\displaystyle C_{n}^{k}} C_{n}^{k} wywołań funkcji (bezpośrednich i pośrednich). Złożoność czasowa jest więc nie mniejsza niż wartość funkcji: {\displaystyle \Omega (C_{n}^{k})} \Omega (C_{n}^{k}) (zobacz Notacja dużego O). Równocześnie, jeśli tylko początkowa wartość k nie jest równa 0 ani n, co najmniej jedna ścieżka rekursji kończy się na wywołaniu WspNewtonaRek(1, 0) albo WspNewtonaRek(1, 1). Ścieżka ta prowadzi przez n poziomów wywołań, w których parametr n był kolejno zmniejszany aż do jedności. Głębokość rekurencji, a zatem złożoność pamięciowa jest więc ściśle liniowa {\displaystyle \Theta (n)} \Theta(n), i to w bardzo wrażliwym obszarze stosu.
+
+Kolejnym krokiem pozwalającym na przyspieszenie obliczeń jest wykorzystanie programowania dynamicznego – można w tabeli przechowywać wyniki obliczeń poszczególnych kroków rekurencji, aby skrócić czas potrzebny na znalezienie danej wartości symbolu. Efektem ubocznym stosowania powyższej metody jest to, że otrzymuje się od razu wszystkie elementy trójkąta Pascala poprzedzające szukaną wartość.
+
+Ograniczenia dla symbolu Newtona[edytuj | edytuj kod]
+Zachodzą następujące nierówności:
+
+{\displaystyle \mathrm {C} (n,k)\leq {\frac {n^{k}}{k!}}} \mathrm{C}(n, k) \le \frac{n^k}{k!}
+{\displaystyle \mathrm {C} (n,k)\leq \left({\frac {n\cdot e}{k}}\right)^{k}} \mathrm{C}(n, k) \le \left(\frac{n\cdot e}{k}\right)^k
+{\displaystyle \mathrm {C} (n,k)\geq \left({\frac {n}{k}}\right)^{k}.} \mathrm{C}(n, k) \ge \left(\frac{n}{k}\right)^k.
+Uogólnienie na wielomiany wyższych stopni[edytuj | edytuj kod]
+Współczynniki dwumienne można uogólnić do współczynników wielomianowych. Definiuje się je w następujący sposób:
+
+{\displaystyle {n \choose k_{1},k_{2},\ldots ,k_{r}}={\frac {n!}{k_{1}!k_{2}!\cdots k_{r}!}}} {n \choose k_{1},k_{2},\ldots ,k_{r}}={\frac  {n!}{k_{1}!k_{2}!\cdots k_{r}!}}
+przy czym:
+
+{\displaystyle \sum _{i=1}^{r}k_{i}=n} \sum _{{i=1}}^{r}k_{i}=n
+Współczynnik dwumienny określa współczynniki wyrażenia: {\displaystyle (x+y)^{n}} (x+y)^{n}, podczas gdy współczynniki wielomianowe określają współczynniki wielomianu:
+
+{\displaystyle (x_{1}+x_{2}+\cdots +x_{r})^{n}} (x_1+x_2+\cdots+x_{r})^{n}.
+w następujący sposób:
+
+{\displaystyle (x_{1}+x_{2}+\cdots +x_{r})^{n}=\sum _{k_{1},k_{2},\ldots ,k_{r}}{n \choose k_{1},k_{2},\ldots ,k_{r}}x_{1}^{k_{1}}x_{2}^{k_{2}}\cdots x_{m}^{k_{r}}} (x_1 + x_2 + \cdots + x_r)^n
+ = \sum_{k_1,k_2,\ldots,k_r} {n \choose k_1, k_2, \ldots, k_r}
+  x_1^{k_1} x_2^{k_2} \cdots x_m^{k_r}
+gdzie sumujemy po wszystkich naturalnych k spełniających podane wcześniej reguły.
+
+Dla k=2 uzyskujemy współczynniki dwumianowe:
+
+{\displaystyle {n \choose k_{1},k_{2}}={n \choose k_{1},n-k_{1}}={n \choose k_{1}}={n \choose k_{2}}} {n \choose k_{1},k_{2}}={n \choose k_{1},n-k_{1}}={n \choose k_{1}}={n \choose k_{2}}
+Interpretacja kombinatoryczna współczynników wielomianowych to liczba sposobów rozmieszczenia n rozróżnialnych elementów w r rozróżnialnych pudełkach, z których każde mieści dokładnie ki elementów, gdzie i jest indeksem pudełka.
+
+Współczynniki wielomianowe mają wiele własności podobnych do własności współczynników dwumianowych, takich jak rekurencja:
+
+{\displaystyle {n \choose k_{1},k_{2},\ldots ,k_{r}}={n-1 \choose k_{1}-1,k_{2},\ldots ,k_{r}}+{n-1 \choose k_{1},k_{2}-1,\ldots ,k_{r}}+\ldots +{n-1 \choose k_{1},k_{2},\ldots ,k_{r}-1}} {n \choose k_{1},k_{2},\ldots ,k_{r}}={n-1 \choose k_{1}-1,k_{2},\ldots ,k_{r}}+{n-1 \choose k_{1},k_{2}-1,\ldots ,k_{r}}+\ldots +{n-1 \choose k_{1},k_{2},\ldots ,k_{r}-1}
+i symetria:
+
+{\displaystyle {n \choose k_{1},k_{2},\ldots ,k_{r}}={n \choose k_{\sigma _{1}},k_{\sigma _{2}},\ldots ,k_{\sigma _{r}}}} {n \choose k_{1},k_{2},\ldots ,k_{r}}={n \choose k_{{\sigma _{1}}},k_{{\sigma _{2}}},\ldots ,k_{{\sigma _{r}}}}
+gdzie {\displaystyle (\sigma _{i})} (\sigma_i) jest permutacją {\displaystyle (1,2,...,r)} (1,2,...,r).
+
+Uogólnienie na liczby rzeczywiste i zespolone[edytuj | edytuj kod]
+Symbol Newtona uogólnia się na liczby rzeczywiste i zespolone, korzystając z funkcji specjalnej gamma. Uogólnienie to opiera się na tożsamości:
+
+{\displaystyle \Gamma (n+1)=n!} \Gamma(n+1)=n!
+spełnionej dla naturalnych wartości n.
+Możemy także przyjąć następującą (nierównoważną) definicję:
+Niech {\displaystyle \left.z\right.} \left.z\right. będzie dowolną liczbą rzeczywistą lub zespoloną. Wówczas przez symbol {\displaystyle {z \choose n}} {z \choose n} będziemy rozumieli wyrażenie
+
+{\displaystyle {z \choose n}=\prod _{k=1}^{n}{z-n+k \over k}={\frac {z(z-1)(z-2)\cdots (z-n+1)}{n!}}.} {z \choose n}=\prod _{{k=1}}^{{n}}{z-n+k \over k}={\frac  {z(z-1)(z-2)\cdots (z-n+1)}{n!}}.
+lub zapisane inaczej
+
+{\displaystyle {z \choose n}=\prod _{k=1}^{n}{z-k+1 \over k}={\frac {z(z-1)(z-2)\cdots (z-n+1)}{n!}}.} {z \choose n}=\prod _{{k=1}}^{{n}}{z-k+1 \over k}={\frac  {z(z-1)(z-2)\cdots (z-n+1)}{n!}}.
+Następujący wzór, zwany górną negacją, przydaje się do wyznaczania wartości symbolu Newtona dla ujemnych wartości z:
+
+{\displaystyle {\binom {z}{n}}=(-1)^{n}{\binom {n-z-1}{n}}} \binom{z}{n} = (-1)^n\binom{n-z-1}{n}
+Zobacz też[edytuj | edytuj kod]
+kombinatoryka
+liczby Stirlinga
+permutacja
+wariacja bez powtórzeń
+wariacja z powtórzeniami
+Linki zewnętrzne[edytuj | edytuj kod]
+Symbol Newtona (ang.) w encyklopedii MathWorld
+Kategoria: Kombinatoryka
+Menu nawigacyjne
+Nie jesteś zalogowanyDyskusjaEdycjeUtwórz kontoZaloguj sięArtykułDyskusjaCzytajEdytujEdytuj kod źródłowyHistoria i autorzySzukaj
+
+Przeszukaj Wikipedię
+Przejdź
+Strona główna
+Losuj artykuł
+Kategorie artykułów
+Najlepsze artykuły
+Częste pytania (FAQ)
+Dla czytelników
+O Wikipedii
+Zgłoś błąd
+Kontakt
+Wspomóż Wikipedię
+Dla wikipedystów
+Pierwsze kroki
+Portal wikipedystów
+Ogłoszenia
+Zasady
+Pomoc
+Ostatnie zmiany
+Narzędzia
+Linkujące
+Zmiany w linkowanych
+Prześlij plik
+Strony specjalne
+Link do tej wersji
+Informacje o tej stronie
+Element Wikidanych
+Cytowanie tego artykułu
+Drukuj lub eksportuj
+Utwórz książkę
+Pobierz jako PDF
+Wersja do druku
+W innych projektach
+Wikimedia Commons
+
+Edytuj linki
+Tę stronę ostatnio edytowano 20 lis 2017, 21:51.
+Tekst udostępniany na licencji Creative Commons: uznanie autorstwa, na tych samych warunkach, z możliwością obowiązywania dodatkowych ograniczeń. Zobacz szczegółowe informacje o warunkach korzystania.
+Polityka ochrony prywatnościO WikipediiKorzystasz z Wikipedii tylko na własną odpowiedzialnośćDla deweloperówKomunikat na temat ciasteczekWersja dla urządzeń mobilnychWikimedia Foundation Powered by MediaWiki
