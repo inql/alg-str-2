@@ -1,5 +1,7 @@
 package com.inql.aisd.btree;
 
+import java.util.Arrays;
+
 public class BTree {
 
     private class Node{
@@ -17,6 +19,14 @@ public class BTree {
             this.parent = parent;
             child = new Node[2*order];
             isLeaf = true;
+        }
+
+        void setKeyValue(int index, int value){key[index] = value;}
+
+        void setChildValue(int index, Node value){child[index] = value;}
+
+        int getKeyIndex(int value){
+            return Arrays.asList(key).indexOf(value);
         }
 
         int getKeyValue(int index){
