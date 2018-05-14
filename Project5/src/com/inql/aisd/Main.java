@@ -2,11 +2,14 @@ package com.inql.aisd;
 
 import com.inql.aisd.disjointset.DisjointSetsUtil;
 import com.inql.aisd.disjointset.Node;
+import com.inql.aisd.graph.Graph;
+import com.inql.aisd.kruskal.Kruskal;
 
 public class Main {
 
     public static void main(String[] args) {
-        disjoinSetsTest();
+//        disjoinSetsTest();
+        kruskalTest();
     }
 
     public static void disjoinSetsTest(){
@@ -27,5 +30,23 @@ public class Main {
                 nodes) {
             System.out.println(node);
         }
+    }
+
+    public static void kruskalTest(){
+        Graph graph = new Graph();
+        Kruskal kruskal = new Kruskal();
+        for(int i =0; i<5; i++)
+        {
+            graph.addVerticle(i);
+        }
+        graph.addEdge(0,1,1);
+        graph.addEdge(0,4,2);
+        graph.addEdge(1,2,5);
+        graph.addEdge(1,3,2);
+        graph.addEdge(1,4,1);
+        graph.addEdge(2,3,7);
+        graph.addEdge(3,4,3);
+        kruskal.kruskal(graph);
+        System.out.println(kruskal.kruskalList);
     }
 }
