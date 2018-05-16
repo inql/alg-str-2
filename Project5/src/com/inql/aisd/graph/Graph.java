@@ -13,7 +13,8 @@ public class Graph {
     }
 
     public void addVerticle(int value){
-        vertices.add(value);
+        if(!vertices.contains(value))
+            vertices.add(value);
     }
 
     public void addEdge(int src, int dest, int weight){
