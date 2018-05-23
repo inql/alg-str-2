@@ -15,8 +15,8 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/inql/aisd/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="62" column="50" selection-start-line="62" selection-start-column="50" selection-end-line="62" selection-end-column="50" />
+            <state relative-caret-position="443">
+              <caret line="31" column="41" selection-start-line="31" selection-start-column="41" selection-end-line="31" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -24,11 +24,86 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="Kmp.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/inql/aisd/algorithms/Kmp.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="40" column="30" selection-start-line="40" selection-start-column="30" selection-end-line="40" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RabinKarp.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/inql/aisd/algorithms/RabinKarp.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="466">
+              <caret line="39" column="30" selection-start-line="39" selection-start-column="30" selection-end-line="39" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Naive.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/inql/aisd/algorithms/Naive.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="305">
+              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Test.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/inql/aisd/Test.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="443">
+              <caret line="27" column="22" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="22" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Testable.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/inql/aisd/algorithms/Testable.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="92">
+              <caret line="4" column="40" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Tools.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/inql/aisd/Tools.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="253">
+              <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Interface" />
+      </list>
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/src/com/inql/aisd/Tools.java" />
+        <option value="$PROJECT_DIR$/src/com/inql/aisd/Naive.java" />
+        <option value="$PROJECT_DIR$/src/com/inql/aisd/algorithms/Testable.java" />
+        <option value="$PROJECT_DIR$/src/com/inql/aisd/algorithms/Naive.java" />
+        <option value="$PROJECT_DIR$/src/com/inql/aisd/algorithms/RabinKarp.java" />
+        <option value="$PROJECT_DIR$/src/com/inql/aisd/algorithms/Kmp.java" />
+        <option value="$PROJECT_DIR$/src/com/inql/aisd/Test.java" />
         <option value="$PROJECT_DIR$/src/com/inql/aisd/Main.java" />
       </list>
     </option>
@@ -51,7 +126,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -59,11 +134,29 @@
               <item name="Project6" type="b2602c69:ProjectViewProjectNode" />
               <item name="Project6" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Project6" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Project6" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Project6" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Project6" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="aisd" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Project6" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Project6" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="aisd" type="462c0819:PsiDirectoryNode" />
+              <item name="algorithms" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -82,7 +175,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main 2 (1)">
+  <component name="RunManager" selected="Application.Main 2">
     <configuration name="Main 2 (1)" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.inql.aisd.Main" />
       <module name="Project6" />
@@ -134,46 +227,47 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1527052067402</updated>
-      <workItem from="1527052070622" duration="5177000" />
+      <workItem from="1527052070622" duration="5275000" />
+      <workItem from="1527070521156" duration="7092000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5177000" />
+    <option name="totallyTimeSpent" value="12367000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1365" y="-28" width="1922" height="1111" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info anchor="right" id="Palette" />
+      <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" weight="0.32919255" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info id="Image Layers" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="right" id="Maven Projects" />
-      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.32919255" />
+      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info id="Image Layers" order="2" />
+      <window_info anchor="right" id="Capture Analysis" order="3" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="right" id="Maven Projects" order="3" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32919255" />
-      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info id="Capture Tool" />
-      <window_info id="Designer" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2496" />
-      <window_info anchor="right" id="Database" />
-      <window_info id="Learn" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info id="Designer" order="2" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2521322" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info id="Learn" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info id="UI Designer" />
-      <window_info anchor="right" id="Theme Preview" />
+      <window_info id="UI Designer" order="2" />
+      <window_info anchor="right" id="Theme Preview" order="3" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39958593" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -184,20 +278,72 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="2" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/tekst1.txt">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/src/com/inql/aisd/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1380">
+          <caret line="60" column="35" lean-forward="true" selection-start-line="60" selection-start-column="35" selection-end-line="60" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tekst.txt">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/src/com/inql/aisd/Tools.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/inql/aisd/algorithms/Testable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="4" column="40" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/inql/aisd/algorithms/Kmp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="40" column="30" selection-start-line="40" selection-start-column="30" selection-end-line="40" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/inql/aisd/algorithms/Naive.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/inql/aisd/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="443">
+          <caret line="27" column="22" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/inql/aisd/algorithms/RabinKarp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="466">
+          <caret line="39" column="30" selection-start-line="39" selection-start-column="30" selection-end-line="39" selection-end-column="30" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/inql/aisd/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="62" column="50" selection-start-line="62" selection-start-column="50" selection-end-line="62" selection-end-column="50" />
+        <state relative-caret-position="443">
+          <caret line="31" column="41" selection-start-line="31" selection-start-column="41" selection-end-line="31" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

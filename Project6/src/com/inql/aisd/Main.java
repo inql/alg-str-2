@@ -1,13 +1,17 @@
 package com.inql.aisd;
 
+import com.inql.aisd.algorithms.Kmp;
+import com.inql.aisd.algorithms.Naive;
+import com.inql.aisd.algorithms.RabinKarp;
+
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
+import java.text.DecimalFormat;
 
 public class Main {
-    private static final int ALPHABET_SIZE = 128;
-    private static final int PRIME_NUMBER = 27077;
+
 
     public static void main(String[] args) {
 	// write your code here
@@ -15,64 +19,63 @@ public class Main {
             System.out.println("Wrong number of arguments, only 2 allowed!");
             return;
         }
-        File pattern =  new File(args[0]);
-        File text = new File(args[1]);
         try{
-            byte[] patternData = Files.readAllBytes(Paths.get(pattern.toURI()));
-            byte[] textData = Files.readAllBytes(Paths.get(text.toURI()));
-            System.out.println((byte)'a');
-            naiveSearch(patternData,textData);
-            rabinKarp(patternData,textData);
+            char[] pattern = initializeDataArray(args[0]);
+            char[] text = initializeDataArray(args[1]);
+            Naive naive = new Naive();
+            RabinKarp rabinKarp = new RabinKarp();
+            Kmp kmp = new Kmp();
+            Test test = new Test(text,pattern);
+            String[] results = new String[3];
+            results[0] = test.doTest(naive);
+            results[1] = test.doTest(rabinKarp);
+            results[2] = test.doTest(kmp);
+            System.out.println("\n\n\n\n\nPODSUMOWANIE:");
+            System.out.println("Naiwny - " + results[0]);
+            System.out.println("rabinKarp - " + results[1]);
+            System.out.println("KMP - " + results[2]);
         }catch (IOException e){
             e.printStackTrace();
         }
     }
 
-    public static void naiveSearch(byte[] patternData, byte[] textData){
-        int pattenDataLength = patternData.length;
-        int textDataLength = textData.length;
-        for(int i = 0; i<=textDataLength-pattenDataLength; i++){
-            if(loopThrough(patternData,textData,pattenDataLength,i))
-                System.out.println("Znalezione wystąpienie wzorca od pozycji: "+(i+1));
+    public static int getInputArrayLength(String filename) throws IOException {
+        File file = new File(filename);
+        int counter = 0;
+        if(!file.exists()){
+            throw new FileNotFoundException(filename+ " plik nie istnieje");
         }
+        FileInputStream fileInputStream = new FileInputStream(file);
+        char current;
+        while (fileInputStream.available()>0){
+            current = (char) fileInputStream.read();
+            if(current != '\n')
+                counter++;
+        }
+        fileInputStream.close();
+        return counter;
     }
 
-    public static boolean loopThrough(byte[] patternData, byte[] textData,int m, int s){
-        for(int i = 0; i<m; i++){
-            if(patternData[i]!=10 || textData[s+1]!=10){
-                if(patternData[i]!=textData[s+i]){
-                    return false;
-                }
-            }
+    private static char[] initializeDataArray(String filename) throws IOException {
+        File file = new File(filename);
+        int index = 0;
+        char[] result = new char[getInputArrayLength(filename)];
+        FileInputStream fileInputStream = new FileInputStream(file);
+        char current;
+        while (fileInputStream.available()>0){
+            current = (char) fileInputStream.read();
+            if(current!='\n')
+                result[index++] = current;
         }
-        return true;
+        return result;
     }
 
-    public static void rabinKarp(byte[] patternData, byte[] textData){
-        int h = 1;
-        int pattenDataLength = patternData.length;
-        int textDataLength = textData.length;
-        int max = textDataLength-pattenDataLength;
-        for(int i=0; i<pattenDataLength-1; i++){
-            h = (h*ALPHABET_SIZE) % PRIME_NUMBER;
-        }
-        int p = hash(patternData,0,pattenDataLength);
-        int t = hash(textData,0,pattenDataLength);
-        for(int s = 0; s<max; s++){
-            if(p == t)
-                if(loopThrough(patternData,textData,pattenDataLength,s))
-                    System.out.println("Znalezione wystąpienie wzorca od pozycji "+(s+1)+" koniec wzorca na: "+(s+pattenDataLength));
-                int t1 = (textData[s]*h)%PRIME_NUMBER;
-                if(t<t1) t=t+PRIME_NUMBER;
-                t = (ALPHABET_SIZE*(t-t1)+textData[s+pattenDataLength])%PRIME_NUMBER;
-        }
-    }
 
-    private static int hash(byte[] source, int begin, int end){
-        int h = 0;
-        for (int i = begin; i < end; i++){
-            h = (ALPHABET_SIZE*h + source[i]) % PRIME_NUMBER;
-        }
-        return h;
-    }
+
+
+
+
+
+
+
 }
