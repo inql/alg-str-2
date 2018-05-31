@@ -3,7 +3,7 @@ package com.inql.aisd.algorithms;
 public class Kmp implements Testable{
 
 
-    public void kmpAlgorithm(char[] text, char[] pattern){
+    private void kmpAlgorithm(char[] text, char[] pattern){
         int textLength = text.length;
         int patternLength = pattern.length;
         int[] pi = prefixFunction(pattern);

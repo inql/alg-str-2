@@ -7,7 +7,7 @@ public class RabinKarp implements Testable{
     private static final int ALPHABET_SIZE = 128;
     private static final int PRIME_NUMBER = 27077;
 
-    public void rabinKarp(char[] patternData, char[] textData){
+    private void rabinKarp(char[] patternData, char[] textData){
         int h = 1;
         int pattenDataLength = patternData.length;
         int textDataLength = textData.length;
